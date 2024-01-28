@@ -5,6 +5,7 @@ const self = this;
 
 // Install Software
 self.addEventListener('install', (event) => {
+    // Wait until cache is open. 
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then((cache) => {
@@ -18,10 +19,13 @@ self.addEventListener('install', (event) => {
 // Listen for requests
 self.addEventListener('fetch', (event) => {
     event.respondWith(
+        // Match event.request and go to fetch whatever is requested
+        // eg fetch data from remote server
         caches.match(event.request)
             .then(() => {
-                return fetch(event.request) 
+                return fetch(event.request)
                     .catch(() => caches.match('offline.html'))
+                    // if failed, then return offline.html
             })
     )
 });
