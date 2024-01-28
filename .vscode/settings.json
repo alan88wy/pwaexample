@@ -1,0 +1,12 @@
+{
+    "graalvm.home": "c:\\ExternalTools\\graalvm\\graalvm-jdk-21.0.2+13.1",
+    "graalvm.installations": [
+        "",
+        "c:\\ExternalTools\\graalvm\\graalvm-jdk-21.0.2+13.1"
+    ],
+    "terminal.integrated.env.windows": {
+        "GRAALVM_HOME": "c:\\ExternalTools\\graalvm\\graalvm-jdk-21.0.2+13.1",
+        "JAVA_HOME": "c:\\ExternalTools\\graalvm\\graalvm-jdk-21.0.2+13.1",
+        "PATH": "c:\\ExternalTools\\graalvm\\graalvm-jdk-21.0.2+13.1\\bin;${env:PATH}"
+    }
+}
